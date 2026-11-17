@@ -1,0 +1,18 @@
+.document ul {
+  margin-top: 0.9rem;
+}
+
+.document li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.document li::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 6px;
+  height: 2px;
+  background: var(--blue);
+}

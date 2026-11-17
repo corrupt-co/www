@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>corrupt company: software that expects to break</title>
+<meta name="description" content="corrupt company is a software studio. We write code for the web, for systems and for devices, and do whatever else we feel like.">
+<meta name="theme-color" content="#14161a">
+<meta property="og:title" content="corrupt company: software that expects to break">
+<meta property="og:description" content="corrupt company is a software studio. We write code for the web, for systems and for devices, and do whatever else we feel like.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@400;500;600&family=Source+Code+Pro:wght@400;600&display=swap">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="announcement">
+  <span>We are hiring two systems engineers. <a href="careers.html">See open roles</a></span>
+  <button type="button" aria-label="Dismiss announcement">&times;</button>
+</div>
+
+<header class="site">
+  <div class="wrapper header-bar">
+    <a href="index.html" class="logo" aria-label="corrupt company, home"><img src="assets/fan.svg" alt="" decoding="async">corrupt company</a>
+    <div class="header-actions">
+      <nav class="main" aria-label="Primary">
+        <a href="index.html" aria-current="page">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="careers.html">Careers</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="hero">
+    <div class="wrapper">
+      <span class="eyebrow">a software studio that does whatever it wants</span>
+      <h1>We build software that expects to <span class="aberration">break</span>.</h1>
+      <p class="lede">corrupt company is a team of engineers and designers. We write code for the web, for systems and for devices, and we look after the technology around it. Everything we ship is built to fail safely.</p>
+      <div class="call-to-action">
+        <a class="button primary" href="projects.html">See our projects</a>
+        <a class="button" href="services.html">What we do</a>
+      </div>
+
+      <div class="editor-window" aria-label="A shared editor session with three collaborators">
+        <div class="editor-window-bar"><i></i><i></i><i></i><span>corrupt-company / company.ts</span>
+          <div class="peers" aria-hidden="true"><b style="background:var(--blue)">M</b><b style="background:var(--ember)">I</b><b style="background:var(--strong)">J</b></div>
+        </div>
+        <div class="tabs"><span class="tab active">company.ts</span><span class="tab">principles.md</span><span class="tab">ship.ts</span></div>
+        <div class="code"><div class="code-inner">
+<span class="code-line"><i>1</i><span class="token-comment">// corrupt company: how we work</span></span>
+<span class="code-line"><i>2</i></span>
+<span class="code-line"><i>3</i><span class="token-keyword">export</span> <span class="token-keyword">const</span> company = {</span>
+<span class="code-line"><i>4</i>  members: <span class="token-number">24</span>,</span>
+<span class="code-line"><i>5</i>  timezones: <span class="token-number">11</span>,</span>
+<span class="code-line"><i>6</i>  stack: [<span class="token-string">"rust"</span>, <span class="token-string">"typescript"</span>, <span class="token-string">"swift"</span>, <span class="token-string">"python"</span>],</span>
+<span class="code-line"><i>7</i>  principle: <span class="token-string">"assume it will corrupt"</span>,</span>
+<span class="code-line"><i>8</i>}</span>
+<span class="code-line"><i>9</i></span>
+<span class="code-line"><i>10</i><span class="token-keyword">export</span> <span class="token-keyword">async</span> <span class="token-keyword">function</span> <span class="token-function">ship</span>(project: Project) {</span>
+<span class="code-line"><i>11</i>  <span class="token-keyword">const</span> tests = <span class="token-keyword">await</span> <span class="token-function">stress</span>(project) <span class="token-comment">// try to destroy it first</span></span>
+<span class="code-line"><i>12</i>  <span class="token-keyword">return</span> <span class="token-function">review</span>(tests, { pairs: <span class="token-keyword">true</span> })</span>
+<span class="code-line"><i>13</i>}</span>
+          <div class="selection" aria-hidden="true"></div>
+          <div class="peer" style="--color:var(--blue);--row:3;--column:14" aria-hidden="true"><svg class="cursor" viewBox="0 0 30 46"><path d="M0 0L0 40L10 31L17 46L24 43L17 28L30 28Z"/></svg><em>mara</em></div>
+          <div class="peer" style="--color:var(--ember);--row:6;--column:30" aria-hidden="true"><svg class="cursor" viewBox="0 0 30 46"><path d="M0 0L0 40L10 31L17 46L24 43L17 28L30 28Z"/></svg><em>ilya</em></div>
+          <div class="peer" style="--color:var(--strong);--row:10;--column:37" aria-hidden="true"><svg class="cursor" viewBox="0 0 30 46"><path d="M0 0L0 40L10 31L17 46L24 43L17 28L30 28Z"/></svg><em>jo</em></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="statistics alternate">
+    <div class="wrapper">
+      <div class="statistic"><b>24</b><span>people in the company</span></div>
+      <div class="statistic"><b>11</b><span>time zones covered</span></div>
+      <div class="statistic"><b>140+</b><span>projects shipped since 2019</span></div>
+      <div class="statistic"><b>1</b><span>rule: assume it will corrupt</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrapper">
+      <div class="about-top">
+        <div class="section-heading reveal">
+          <span class="tag">about</span>
+          <h2 class="big">A small company with a big appetite.</h2>
+        </div>
+        <div class="prose reveal">
+          <p>We started in 2019 as four friends who were tired of software that only works on the day of the demo. Seven years later we are 24 people spread across eleven time zones, still sharing keyboards and still arguing about error messages.</p>
+          <p><strong>Mostly we write software</strong>: web apps, mobile apps, backends, tooling. But nobody ever said a software studio could not also repair a weather station, design a board game or audit a bank. So we do those too, when we feel like it and the people involved are interesting.</p>
+          <p>The through line is simple. Everything fails eventually, so we design for the failure first and make it boring.</p>
+        </div>
+      </div>
+      <dl class="facts-row reveal">
+        <div><dt>founded</dt><dd>2019</dd></div>
+        <div><dt>based</dt><dd>remote, 11 time zones</dd></div>
+        <div><dt>main languages</dt><dd>Rust, TypeScript, Swift, Python</dd></div>
+        <div><dt>clients</dt><dd>startups, banks, clinics, one lighthouse</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="services" class="alternate">
+    <div class="wrapper">
+      <div class="section-heading row reveal">
+        <div>
+          <span class="tag">what we do</span>
+          <h2>Mostly code, and the technology around it.</h2>
+        </div>
+        <a class="arrow-link" href="services.html">All services</a>
+      </div>
+      <div class="service-list reveal">
+        <a class="service-row" href="services.html"><span class="token-number">01</span><h3>Software engineering</h3><p>Web, mobile and backend systems in the language that fits the problem. Rust, TypeScript, Swift and Python.</p><span class="service-tags">web / mobile / backend</span><span class="corner-arrow" aria-hidden="true">&#8599;</span></a>
+        <a class="service-row" href="services.html"><span class="token-number">02</span><h3>Infrastructure and systems</h3><p>Cloud, networks and the pipelines between them, designed so one weak link does not take the rest down.</p><span class="service-tags">cloud / networks / ci</span><span class="corner-arrow" aria-hidden="true">&#8599;</span></a>
+        <a class="service-row" href="services.html"><span class="token-number">03</span><h3>Reliability and monitoring</h3><p>Alerts that mean something, dashboards you can read, and runbooks written before the incident.</p><span class="service-tags">slo / alerting / on-call</span><span class="corner-arrow" aria-hidden="true">&#8599;</span></a>
+        <a class="service-row" href="services.html"><span class="token-number">04</span><h3>Data and AI</h3><p>Pipelines, models and the evaluation around them, with failure cases tested as carefully as the good ones.</p><span class="service-tags">data / ml / evaluation</span><span class="corner-arrow" aria-hidden="true">&#8599;</span></a>
+        <a class="service-row" href="services.html"><span class="token-number">05</span><h3>Security and audits</h3><p>Code review, threat modeling and penetration testing, with findings written for the people who fix them.</p><span class="service-tags">review / testing / compliance</span><span class="corner-arrow" aria-hidden="true">&#8599;</span></a>
+        <a class="service-row" href="services.html"><span class="token-number">06</span><h3>Everything else</h3><p>Devices, hardware, procurement, IT support, the odd game. If it plugs in or logs in, we will look at it.</p><span class="service-tags">devices / it / whatever</span><span class="corner-arrow" aria-hidden="true">&#8599;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <div class="wrapper">
+      <div class="section-heading reveal">
+        <span class="tag">principles</span>
+        <h2>Three habits that decide whether it is still working in two years.</h2>
+      </div>
+      <div class="principle-grid">
+        <div class="principle reveal"><span class="principle-number">01</span><h3>Assume it will corrupt.</h3><p>Data, networks, people and our own code all fail eventually. We design for the failure first and the happy path second.</p></div>
+        <div class="principle reveal"><span class="principle-number">02</span><h3>Share the keyboard.</h3><p>Every change is written or reviewed by two people. Nobody owns a file for long, so nothing depends on one person.</p></div>
+        <div class="principle reveal"><span class="principle-number">03</span><h3>Ship the boring parts.</h3><p>Backups, alerts, documentation, handover. The unglamorous work is what keeps the glamorous work alive.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="alternate">
+    <div class="wrapper">
+      <div class="section-heading row reveal">
+        <div>
+          <span class="tag">team</span>
+          <h2>The people holding the keyboard.</h2>
+        </div>
+        <a class="arrow-link" href="careers.html">Join us</a>
+      </div>
+      <div class="team">
+        <div class="person spotlight reveal" style="--color:var(--blue)"><div class="avatar">M</div><h3>Mara Voss</h3><p>Principal engineer</p><small>rust / systems</small></div>
+        <div class="person spotlight reveal" style="--color:var(--ember)"><div class="avatar">I</div><h3>Ilya Orlov</h3><p>Infrastructure lead</p><small>cloud / networks</small></div>
+        <div class="person spotlight reveal" style="--color:var(--strong)"><div class="avatar">J</div><h3>Jo Benning</h3><p>Design engineer</p><small>typescript / ui</small></div>
+        <div class="person spotlight reveal" style="--color:var(--blue)"><div class="avatar">S</div><h3>Sana Qureshi</h3><p>Data and ML</p><small>python / evaluation</small></div>
+        <div class="person spotlight reveal" style="--color:var(--ember)"><div class="avatar">T</div><h3>Tomas Kral</h3><p>Mobile lead</p><small>swift / kotlin</small></div>
+        <div class="person spotlight reveal" style="--color:var(--strong)"><div class="avatar">I</div><h3>Ines Duarte</h3><p>Security</p><small>review / pentest</small></div>
+        <div class="person spotlight reveal" style="--color:var(--blue)"><div class="avatar">P</div><h3>Pavel Novak</h3><p>Embedded</p><small>c / rust / hardware</small></div>
+        <div class="person spotlight reveal" style="--color:var(--ember)"><div class="avatar">L</div><h3>Lea Marchetti</h3><p>Producer</p><small>planning / handover</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="wrapper">
+      <div class="section-heading reveal">
+        <span class="tag">history</span>
+        <h2>Seven years, one rule.</h2>
+      </div>
+      <ol class="horizontal-timeline reveal">
+        <li><time>2019</time><h3>Four friends, one repo</h3><p>The first client was a bakery with a very angry point of sale system.</p></li>
+        <li><time>2021</time><h3>Went fully remote</h3><p>Hired our first people outside Europe and learned to love async.</p></li>
+        <li><time>2023</time><h3>Opened the lab</h3><p>Two days a month for projects nobody asked for. Half of them became products.</p></li>
+        <li><time>2025</time><h3>Twenty people</h3><p>Crossed 100 shipped projects and still no pager rotation that makes anyone cry.</p></li>
+        <li><time>2026</time><h3>You are here</h3><p>24 of us, eleven time zones, hiring carefully.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="work" class="alternate">
+    <div class="wrapper">
+      <div class="section-heading row reveal">
+        <div>
+          <span class="tag">selected work</span>
+          <h2>Projects where failure was the design brief.</h2>
+        </div>
+        <a class="arrow-link" href="projects.html">All projects</a>
+      </div>
+      <div class="bento">
+        <a class="case big spotlight reveal" href="projects.html"><div class="thumbnail"><b>3 days &rarr; 40 min</b><span>month-end close</span></div><div class="case-body"><span class="kind">fintech / rust</span><h3>Ledger reconciliation engine</h3><p>Every mismatch traced to its source, with an audit trail finance can read.</p></div></a>
+        <a class="case spotlight reveal" href="projects.html"><div class="thumbnail"><b>40,000+</b><span>devices reporting</span></div><div class="case-body"><span class="kind">iot / typescript</span><h3>Fleet telemetry platform</h3><p>Handles dropped, late and duplicated readings without losing the trend.</p></div></a>
+        <a class="case spotlight reveal" href="projects.html"><div class="thumbnail"><b>0 lost</b><span>offline bookings</span></div><div class="case-body"><span class="kind">health / swift</span><h3>Clinic scheduling app</h3><p>Keeps working offline, then reconciles quietly when the network returns.</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrapper">
+      <div class="section-heading reveal"><span class="tag">kind words</span><h2>What clients say after the incident that did not happen.</h2></div>
+      <div class="quotes">
+        <blockquote class="quote spotlight reveal"><p>"They found three ways our payments flow could lose money before we had even finished the brief."</p><footer><b>Elena R.</b>CTO, payments startup</footer></blockquote>
+        <blockquote class="quote spotlight reveal"><p>"The handover docs were better than our own. We run it without them and it still works."</p><footer><b>David K.</b>Head of operations, clinic network</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="alternate">
+    <div class="wrapper faq-split">
+      <div class="section-heading reveal"><span class="tag">faq</span><h2>Questions people actually ask.</h2></div>
+      <div class="faq reveal">
+        <details><summary>Do you only do software?</summary><p>Mostly, yes. Around 80% of our work is software. The rest is whatever is interesting: hardware, IT, audits, the occasional game. If you are unsure, ask.</p></details>
+        <details><summary>How big are the projects you take on?</summary><p>From a two-week sprint to multi-year embedded teams. We are happiest between three and twelve months.</p></details>
+        <details><summary>Can you work with our existing team?</summary><p>Yes, and we prefer it. We pair with your engineers so nothing is locked inside our heads.</p></details>
+        <details><summary>Where are you based?</summary><p>Nowhere in particular. We are remote across eleven time zones, so someone is awake when you need them.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrapper">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img src="assets/fan.svg" alt="" decoding="async">corrupt company</a>
+      </div>
+      <div><h4>studio</h4><a href="index.html">About</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="careers.html">Careers</a></div>
+      <div><h4>elsewhere</h4><a href="mailto:hello@corruptcompany.example">Email</a><a href="#">GitHub</a><a href="#">Mastodon</a></div>
+      <div><h4>legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="privacy.html#security">Security</a></div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span data-year>2026</span> corrupt company</span>
+      <span>Refuse the static</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" role="dialog" aria-label="Cookie notice">
+  <p>We remember small preferences in your browser and run one cookie-free analytics counter. Details in the <a href="privacy.html">privacy policy</a>.</p>
+  <div>
+    <button class="button primary small" type="button" data-choice="ok">Fine by me</button>
+    <button class="button small" type="button" data-choice="no">No thanks</button>
+  </div>
+</div>
+
+<button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

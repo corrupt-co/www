@@ -1,0 +1,98 @@
+.service {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.service:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.service h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.service .tag {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.ticks {
+  margin-top: 1.25rem;
+}
+
+.ticks li {
+  position: relative;
+  padding: 0.35rem 0 0.35rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.ticks li::before {
+  content: "";
+  position: absolute;
+  top: 0.95rem;
+  left: 0;
+  width: 8px;
+  height: 2px;
+  background: var(--blue);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+
+.stack span {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--dim);
+  font: 400 0.75rem var(--mono);
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.75rem;
+}
+
+.plan {
+  padding: 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.plan.featured {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px rgba(91, 140, 255, 0.25), 0 20px 60px rgba(91, 140, 255, 0.07);
+}
+
+.plan h3 {
+  color: var(--strong);
+  font: 500 1.3rem/1.2 var(--serif);
+}
+
+.plan .when {
+  display: block;
+  margin: 0.4rem 0 1rem;
+  color: var(--blue);
+  font: 400 0.78rem var(--mono);
+}
+
+.plan p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 880px) {
+  .plans,
+  .service {
+      grid-template-columns: 1fr;
+    }
+}

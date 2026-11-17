@@ -1,0 +1,366 @@
+.blueprint-section {
+  position: relative;
+  padding: 3rem 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.blueprint-section + .blueprint-section {
+  padding-top: 0;
+}
+
+.blueprint {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.blueprint-guides {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 3rem;
+  pointer-events: none;
+}
+
+.blueprint-guides i {
+  box-shadow: inset -1px 0 0 var(--line);
+}
+
+.blueprint-guides i:first-child {
+  box-shadow:
+    inset 1px 0 0 var(--line),
+    inset -1px 0 0 var(--line);
+}
+
+.blueprint-cell {
+  position: relative;
+  min-width: 0;
+  background-color: var(--background);
+  box-shadow:
+    inset -1px 0 0 var(--line),
+    inset 0 -1px 0 var(--line);
+}
+
+.blueprint-cell::after {
+  content: "";
+  position: absolute;
+  right: -100vw;
+  bottom: 0;
+  left: -100vw;
+  z-index: -1;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+
+.cell-heading,
+.cell-text-3,
+.cell-figure-2,
+.cell-figure-4 {
+  box-shadow:
+    inset 1px 0 0 var(--line),
+    inset -1px 0 0 var(--line),
+    inset 0 -1px 0 var(--line);
+}
+
+.cell-heading {
+  box-shadow:
+    inset 1px 0 0 var(--line),
+    inset -1px 0 0 var(--line),
+    inset 0 -1px 0 var(--line),
+    inset 0 1px 0 var(--line);
+}
+
+.cell-figure-1 {
+  box-shadow:
+    inset -1px 0 0 var(--line),
+    inset 0 -1px 0 var(--line),
+    inset 0 1px 0 var(--line);
+}
+
+.cell-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -200vw;
+  left: -100vw;
+  z-index: -1;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+
+.cell-heading {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.cell-heading h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--strong);
+  font: 500 clamp(2rem, 3.2vw, 2.8rem)/1.12 var(--sans);
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.cell-heading p {
+  max-width: 36ch;
+}
+
+.blueprint-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--background);
+  background-image: radial-gradient(rgba(240, 241, 243, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-repeat: round;
+}
+
+.blueprint-figure svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.blueprint-figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(143, 177, 255, 0.95) 1px, transparent 1px),
+    radial-gradient(
+      260px circle at var(--mouse-x, -400px) var(--mouse-y, -400px),
+      rgba(91, 140, 255, 0.1),
+      transparent 70%
+    );
+  background-size:
+    16px 16px,
+    100% 100%;
+  background-repeat: round, no-repeat;
+  -webkit-mask-image: radial-gradient(
+    170px circle at var(--mouse-x, -400px) var(--mouse-y, -400px),
+    #000,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    170px circle at var(--mouse-x, -400px) var(--mouse-y, -400px),
+    #000,
+    transparent 75%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.blueprint-figure:hover::before {
+  opacity: 1;
+}
+
+.figure-label {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  left: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--background);
+  color: var(--dim);
+  font: 400 0.68rem/1 var(--mono);
+  letter-spacing: 0.08em;
+}
+
+.blueprint-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem;
+  transition: background 0.2s;
+}
+
+.blueprint-text:hover {
+  background: var(--surface);
+}
+
+.blueprint-text h3 {
+  color: var(--strong);
+  font: 500 1.35rem/1.25 var(--sans);
+}
+
+.blueprint-text p {
+  max-width: 34ch;
+  margin-top: 0.7rem;
+  color: var(--dim);
+  font: 400 0.82rem/1.75 var(--mono);
+}
+
+.blueprint-text .corner-arrow {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.4rem;
+  color: var(--dim);
+  font-size: 1.1rem;
+  transition:
+    color 0.15s,
+    transform 0.15s;
+}
+
+.blueprint-text:hover .corner-arrow {
+  color: var(--blue);
+  transform: translate(2px, -2px);
+}
+
+.cell-figure-1 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+
+.cell-figure-2 {
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+.cell-text-2 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.cell-text-3 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.cell-figure-3 {
+  grid-column: 2 / 4;
+  grid-row: 4;
+}
+
+.cell-figure-4 {
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
+
+.cell-text-4 {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
+.blueprint-left {
+  box-shadow:
+    inset 1px 0 0 var(--line),
+    inset -1px 0 0 var(--line),
+    inset 0 -1px 0 var(--line);
+}
+
+.project-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 190px;
+  padding: 1.5rem 1.75rem;
+  background-image: radial-gradient(rgba(240, 241, 243, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-repeat: round;
+}
+
+.project-top .figure-label {
+  background: transparent;
+}
+
+.project-top b {
+  color: var(--strong);
+  font: 400 clamp(2rem, 3.4vw, 2.8rem)/1.05 var(--sans);
+  letter-spacing: -0.02em;
+}
+
+.project-top .caption {
+  margin-top: 0.5rem;
+  color: var(--dim);
+  font: 400 0.75rem var(--mono);
+}
+
+.project-body {
+  flex: 1;
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.project-body .kind {
+  color: var(--dim);
+  font: 400 0.72rem var(--mono);
+}
+
+.project-body h3 {
+  margin: 0.6rem 0 0;
+  color: var(--strong);
+  font: 500 1.25rem/1.25 var(--sans);
+}
+
+.project-body p {
+  max-width: 36ch;
+  margin-top: 0.6rem;
+  color: var(--dim);
+  font: 400 0.82rem/1.75 var(--mono);
+}
+
+.project-card:hover {
+  background-color: var(--surface);
+}
+
+@media (max-width: 880px) {
+  .blueprint {
+      grid-template-columns: 1fr;
+    }
+
+  .blueprint-guides {
+      grid-template-columns: 1fr;
+    }
+
+  .blueprint-guides i:nth-child(n + 2) {
+      display: none;
+    }
+
+  .blueprint-cell {
+      grid-column: 1 !important;
+      grid-row: auto !important;
+    }
+
+  .blueprint-cell {
+      box-shadow:
+        inset 1px 0 0 var(--line),
+        inset -1px 0 0 var(--line),
+        inset 0 -1px 0 var(--line);
+    }
+
+  .cell-heading {
+      box-shadow:
+        inset 1px 0 0 var(--line),
+        inset -1px 0 0 var(--line),
+        inset 0 -1px 0 var(--line),
+        inset 0 1px 0 var(--line);
+    }
+
+  .cell-text-2,
+  .cell-text-3,
+  .cell-text-4 {
+      min-height: 200px;
+    }
+}
